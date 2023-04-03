@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <h4>ユニッチの公式サイト</h4>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="self-introduction.html">自己紹介</a></li>
+          <li><a href="https://www.youtube.com/@yunicci">YouTubeチャンネル</a></li>
+          <li><a href="notice.html">お知らせ</a></li>
+          <li><a href="">お問い合わせ</a></li>
+          <li><a href="site-operator.html">サイト運営者</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+
+    <div class="container">
+		<img class="profile-image" src="InShot_20230302_183215087.jpg" alt="プロフィール画像">
+		<div class="name">名前：ユニッチ</div>
+		<div class="info">年齢: 非公開 / 性別: 男性</div>
+		<div class="likes">
+			<p>好きなこと:</p>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<p>好きな食べ物:</p>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+        <style>
+            --自己紹介--
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-image {
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                margin-top: 35px;
+            }
+            .name {
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 20px;
+                text-align: justify;
+            }
+            .info {
+                font-size: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: justify;
+            }
+            .likes {
+                font-size: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: justify;
+                
+            }
+            --自己紹介--
+            * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #00ff91;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  /* background-color: red; */
+  justify-content: space-around;
+  width: 38%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: 0.5s ease;
+}
+
+.nav-active {
+  transform: translateX(0%) !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* body {
+    display: none;
+  } */
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    /* display: flex; */
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color: #00ff91;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@keyframes navLinksFade {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(405deg) translate(-5px, -6px);
+}
+        </style>
+
+<script>
+    const burger = document.querySelector(".burger");
+const nav = document.querySelector(".nav-links");
+const navLinks = document.querySelectorAll(".nav-links li");
+
+burger.addEventListener("click", () => {
+//console.log("click");
+//console.log(navLinks.classList);
+nav.classList.toggle("nav-active");
+
+navLinks.forEach((link, index) => {
+if (link.style.animation) {
+  link.style.animation = "";
+} else {
+  // console.log(index);
+  link.style.animation = `navLinksFade 0.5s ease forwards ${
+    index / 7 + 0.4
+  }s`;
+}
+});
+//burger animataion
+burger.classList.toggle("toggle");
+});
+</script>
+</body>
+</html>

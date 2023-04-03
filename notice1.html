@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ - 貝殻的遊戯 公式サイトが出来ました！</title>
+    <link rel="stylesheet" href="app.json">
+</head>
+<body>
+    <h1>お知らせ(2023/03/25)</h1>
+    <h2>タイトル：ユニッチの公式サイトが出来ました！</h2>
+    <h1>お知らせ内容</h1>
+    <h3>ユニッチ公式サイトでは、YouTubeで投稿した動画を公式サイトでも見られるようします！</h3>
+
+    <div class="button008">
+        <a href="notice.html">お知らせページへ戻る</a>
+    </div>
+
+    <style>
+        body{
+            background-color: rgb(255, 174, 0);
+        }
+        h1{
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        h2{
+            text-align: center;
+            color: white;
+        }
+        h3{
+            text-align: center;
+            color: white
+        }
+
+        /* 008 */
+.button008 a {
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index:0;
+}
+.button008 a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #6bff77;
+    transition: .3s;
+    left:0;
+}
+.button008 a:hover {
+    color: #FFF;
+}
+.button008 a:hover:before {
+    width: 100%;
+    z-index: -1;
+}
+
+    </style>
+</body>
+</html>

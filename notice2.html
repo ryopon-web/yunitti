@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.json">
+    <title>お知らせ - 貝殻的遊戯 公式サイトが出来ました！</title>
+</head>
+<body>
+    <h1>お知らせ (2023/03/26)</h1>
+    <h2>タイトル：YouTube動画のサイズをレスポンシブ対応にしました。</h2>
+    <h1>お知らせ内容</h1>
+    <h3>ホームにあるYouTube動画のサイズをレスポンシブ対応にしました！PC版は動画サイズが大きくなり、モバイル版は、動画サイズが小さくなります。</h3>
+
+    <div class="button008">
+        <a href="notice.html">お知らせページへ戻る</a>
+    </div>
+
+    <style>
+        body{
+            background-color: deepskyblue;
+        }
+        h1{
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        h2{
+            text-align: center;
+            color: white;
+        }
+        h3{
+            text-align: center;
+            color: white
+        }
+
+        /* 008 */
+.button008 a {
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index:0;
+}
+.button008 a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #6bb6ff;
+    transition: .3s;
+    left:0;
+}
+.button008 a:hover {
+    color: #FFF;
+}
+.button008 a:hover:before {
+    width: 100%;
+    z-index: -1;
+}
+
+    </style>
+</body>
+</html>

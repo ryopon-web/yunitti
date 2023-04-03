@@ -1,0 +1,12 @@
+{
+    "lang": "ja",
+    "name": "貝殻的遊戯 公式サイト",
+    "short_name": "貝殻的遊戯 公式サイト",
+    "icons": [{
+          "src": "/Users/ryopon/Desktop/VSCode Projects/ウェブサイト制作/貝殻的遊戯　公式サイト/GitHubPage/kaigaratekiyuugi/channels4_profile.jpg",
+          "sizes": "144x144",
+          "type": "png"
+        }],
+    "start_url": "index.html",
+    "display": "standalone"
+  }
